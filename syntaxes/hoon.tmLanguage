@@ -30,7 +30,7 @@
 			<key>end</key>
 			<string>\s*"""</string>
 			<key>name</key>
-			<string>string.double.hoon</string>
+			<string>string.quoted.double.hoon</string>
 		</dict>
     <!-- block string (double quotes) -->
 		<dict>
@@ -41,9 +41,9 @@
 			<key>end</key>
 			<string>\s*'''</string>
 			<key>name</key>
-			<string>string.double.hoon</string>
+			<string>string.quoted.double.hoon</string>
 		</dict>
-    <!-- string (double quotes) -->
+    <!-- tape -->
 		<dict>
 			<key>begin</key>
 			<string>\"</string>
@@ -52,7 +52,7 @@
 			<key>end</key>
 			<string>\"</string>
 			<key>name</key>
-			<string>string.double.hoon</string>
+			<string>string.quoted.double.hoon</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -61,7 +61,7 @@
 				</dict>
 			</array>
 		</dict>
-    <!-- string (single quotes) -->
+    <!-- cord -->
 		<dict>
 			<key>begin</key>
 			<string>\'</string>
@@ -70,7 +70,7 @@
 			<key>end</key>
 			<string>\'</string>
 			<key>name</key>
-			<string>string.single.hoon</string>
+			<string>string.quoted.single.hoon</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -79,15 +79,15 @@
 				</dict>
 			</array>
 		</dict>
-    <!-- ??? -->
-		<dict>
+    <!-- TODO what is this? -->
+		<!-- <dict>
 			<key>comment</key>
 			<string>arm</string>
 			<key>match</key>
 			<string>[a-z]([a-z0-9-]*[a-z0-9])?/</string>
 			<key>name</key>
 			<string>constant.character.hoon</string>
-		</dict>
+		</dict> -->
     <!-- arm -->
 		<dict>
 			<key>begin</key>
@@ -99,14 +99,14 @@
 			<key>end</key>
 			<string>(?![a-z0-9-])</string>
 		</dict>
-    <!-- constant -->
+    <!-- term -->
 		<dict>
 			<key>comment</key>
-			<string>cube</string>
+			<string>term</string>
 			<key>match</key>
 			<string>%[a-z]([a-z0-9-]*[a-z0-9])?</string>
 			<key>name</key>
-			<string>constant.character.hoon</string>
+			<string>storage.type.hoon</string>
 		</dict>
     <!-- type (@u, @uv, @uvF, etc.) -->
 		<dict>
