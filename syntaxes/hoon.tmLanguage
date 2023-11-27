@@ -126,17 +126,6 @@
 			<key>name</key>
 			<string>keyword.control.hoon</string>
 		</dict>
-    <!-- terminator -->
-		<dict>
-			<key>begin</key>
-			<string>;script(type "text/coffeescript")</string>
-			<key>comment</key>
-			<string>rune</string>
-			<key>end</key>
-			<string>==</string>
-			<key>name</key>
-			<string>keyword.control.hoon</string>
-		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>source.hoon</string>
