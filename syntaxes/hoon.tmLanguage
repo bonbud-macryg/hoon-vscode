@@ -108,12 +108,12 @@
 			<key>name</key>
 			<string>constant.character.hoon</string>
 		</dict>
-    <!-- type (@t, @ta, @tas, etc.) -->
+    <!-- type (@u, @uv, @uvF, etc.) -->
 		<dict>
 			<key>comment</key>
 			<string>aura</string>
 			<key>match</key>
-			<string>@[a-z]([a-z0-9-]*[a-z0-9])?</string>
+			<string>@[a-z]([a-zA-Z0-9-]*[a-zA-Z0-9])?</string>
 			<key>name</key>
 			<string>storage.type.hoon</string>
 		</dict>
