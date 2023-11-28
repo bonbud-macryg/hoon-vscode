@@ -142,6 +142,15 @@
 			<key>name</key>
 			<string>constant.language.hoon</string>
 		</dict>
+    <!-- numeric constant (%1, %2, %3, etc.)-->
+    <dict>
+			<key>comment</key>
+			<string>constant</string>
+			<key>match</key>
+			<string>%[0-9]</string>
+			<key>name</key>
+			<string>constant.numeric.hoon</string>
+		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>source.hoon</string>
