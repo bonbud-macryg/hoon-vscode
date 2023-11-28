@@ -151,6 +151,15 @@
 			<key>name</key>
 			<string>constant.numeric.hoon</string>
 		</dict>
+    <!-- literal string (%'foo', etc.) -->
+    <dict>
+			<key>comment</key>
+			<string>constant</string>
+			<key>match</key>
+			<string>%'[^']*'</string>
+			<key>name</key>
+			<string>constant.language.hoon</string>
+		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>source.hoon</string>
