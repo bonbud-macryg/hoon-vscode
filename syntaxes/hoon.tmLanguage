@@ -117,6 +117,15 @@
 			<key>name</key>
 			<string>storage.type.hoon</string>
 		</dict>
+    <!-- loobean -->
+    <dict>
+			<key>comment</key>
+			<string>loobean</string>
+			<key>match</key>
+			<string>(\%\.n|\%\.y)</string>
+			<key>name</key>
+			<string>constant.language.hoon</string>
+		</dict>
     <!-- rune -->
 		<dict>
 			<key>comment</key>
@@ -125,6 +134,15 @@
       <string>(\+\||\+\$|\+\+|\+\*|\|\$|\|\_|\|:|\|\%|\|\.|\|\^|\|\-|\|\~|\|\*|\|\=|\|\@|\|\?|\$\||\$\_|\$\%|\$:|\$&lt;|\$&gt;|\$\-|\$\^|\$&amp;|\$\~|\$\@|\$\=|\$\?|\%\_|\%:|\%\.|\%\-|\%\^|\%\+|\%\~|\%\*|\%\=|:\_|:\-|:\^|:\+|:\~|:\*|\.\^|\.\+|\.\*|\.\=|\.\?|\/\$|\/\%|\/\-|\/\+|\/\=|\/\*|\/\~|\/\?|\^\||\^:|\^\.|\^\-|\^\+|\^&amp;|\^\~|\^\*|\^\=|\^\?|\;:|\;\/|\;&lt;|\;\+|\;\;|\;\~|:\*|\;\=|\~\||\~\$|\~\_|\~\%|\~\/|\~&lt;|\~&gt;|\~\+|\~&amp;|\~&amp;|\~\=|\~\?|\~\!|\=\||\=:|\=\,|\=\.|\=\/|\=&lt;|\=&gt;|\=\-|\=\^|\=\+|\=\;|\=\~|\=\*|\=\?|\?\||\?:|\?\.|\?&lt;|\?&gt;|\?\-|\?\^|\?\+|\?&amp;|\?\@|\?\~|\?\=|\?\!|\=\=|\-\-|\!:|\!\,|\!\.|\!&lt;|\!&gt;|\!\;|\!\@|\!\=|\!\?|\!\!)</string>
 			<key>name</key>
 			<string>keyword.control.hoon</string>
+		</dict>
+    <!-- literal loobean -->
+    <dict>
+			<key>comment</key>
+			<string>loobean</string>
+			<key>match</key>
+			<string>(\||&amp;)</string>
+			<key>name</key>
+			<string>constant.language.hoon</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
