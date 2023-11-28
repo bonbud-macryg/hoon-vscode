@@ -117,12 +117,12 @@
 			<key>name</key>
 			<string>storage.type.hoon</string>
 		</dict>
-    <!-- loobean -->
+    <!-- loobean (%.y, %.n, .y, .n) -->
     <dict>
 			<key>comment</key>
 			<string>loobean</string>
 			<key>match</key>
-			<string>(\%\.n|\%\.y)</string>
+			<string>(\%?\.n|\%?\.y)</string>
 			<key>name</key>
 			<string>constant.language.hoon</string>
 		</dict>
@@ -135,7 +135,16 @@
 			<key>name</key>
 			<string>keyword.control.hoon</string>
 		</dict>
-    <!-- literal loobean -->
+    <!-- constant loobean (%&, %|) -->
+    <dict>
+			<key>comment</key>
+			<string>loobean</string>
+			<key>match</key>
+			<string>(\%\||%&amp;)</string>
+			<key>name</key>
+			<string>constant.language.hoon</string>
+		</dict>
+    <!-- literal loobean (&, |) -->
     <dict>
 			<key>comment</key>
 			<string>loobean</string>
