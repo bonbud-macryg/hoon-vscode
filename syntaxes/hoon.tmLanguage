@@ -79,27 +79,16 @@
 				</dict>
 			</array>
 		</dict>
-    <!-- TODO what is this? -->
-		<!-- <dict>
+    <!-- arm (++  foo, etc.)-->
+		<dict>
 			<key>comment</key>
 			<string>arm</string>
 			<key>match</key>
-			<string>[a-z]([a-z0-9-]*[a-z0-9])?/</string>
+			<string>\+\+  [a-z]([a-z0-9-]*[a-z0-9])?</string>
 			<key>name</key>
-			<string>constant.character.hoon</string>
-		</dict> -->
-    <!-- arm -->
-		<dict>
-			<key>begin</key>
-			<string>\+[-+]  (?=[a-z]([a-z0-9-]*[a-z0-9])?)</string>
-			<key>comment</key>
-			<string>arm</string>
-			<key>contentName</key>
 			<string>entity.name.function.hoon</string>
-			<key>end</key>
-			<string>(?![a-z0-9-])</string>
 		</dict>
-    <!-- term -->
+    <!-- term (%foo, %bar, etc.)-->
 		<dict>
 			<key>comment</key>
 			<string>term</string>
