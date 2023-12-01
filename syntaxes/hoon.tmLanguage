@@ -133,7 +133,7 @@
 			<key>name</key>
 			<string>constant.language.hoon</string>
 		</dict>
-    <!-- literal loobean (&, |) -->
+    <!-- loobean true & false (&, |) -->
     <dict>
 			<key>comment</key>
 			<string>loobean</string>
@@ -149,7 +149,7 @@
 			<key>match</key>
 			<string>%[0-9]</string>
 			<key>name</key>
-			<string>constant.numeric.hoon</string>
+			<string>storage.type.hoon</string>
 		</dict>
     <!-- literal string (%'foo', etc.) -->
     <dict>
