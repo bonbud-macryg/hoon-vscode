@@ -10,6 +10,25 @@
 	<string>hoon</string>
 	<key>patterns</key>
 	<array>
+    <!-- LOOBEANS -->
+      <!-- loobean (%.y, %.n, .y, .n) -->
+        <dict>
+          <key>comment</key>
+          <string>loobean</string>
+          <key>match</key>
+          <string>(\%?\.n|\%?\.y)</string>
+          <key>name</key>
+          <string>constant.language.hoon</string>
+        </dict>
+        <!-- constant loobean (%&, %|, &, |) -->
+        <dict>
+          <key>comment</key>
+          <string>loobean</string>
+          <key>match</key>
+          <string>(\%?\||\%?\&amp;)</string>
+          <key>name</key>
+          <string>constant.language.hoon</string>
+        </dict>
     <!-- COMMENTS -->
       <dict>
         <key>begin</key>
@@ -207,6 +226,45 @@
           </dict>
         </array>
       </dict>
+    <!-- TYPES -->
+      <!-- type (@u, @uv, @uvF, etc.) -->
+      <dict>
+        <key>comment</key>
+        <string>aura</string>
+        <key>match</key>
+        <string>@[a-z]([a-zA-Z0-9-]*[a-zA-Z0-9])?</string>
+        <key>name</key>
+        <string>storage.type.hoon</string>
+      </dict>
+    <!-- CONSTANTS -->
+      <!-- term (%foo, %bar, etc.)-->
+        <dict>
+          <key>comment</key>
+          <string>term</string>
+          <key>match</key>
+          <string>%[a-z]([a-z0-9-]*[a-z0-9])?</string>
+          <key>name</key>
+          <string>constant.character.hoon</string>
+        </dict>
+        <!-- numeric constant (%1, %2, %3, etc.)-->
+        <dict>
+          <key>comment</key>
+          <string>constant</string>
+          <key>match</key>
+          <string>%[0-9]</string>
+          <key>name</key>
+          <string>constant.numeric.hoon</string>
+        </dict>
+        <!-- literal string (%'foo', etc.) -->
+        <dict>
+          <key>comment</key>
+          <string>constant</string>
+          <key>match</key>
+          <string>%'[^']*'</string>
+          <key>name</key>
+          <string>constant.character.hoon</string>
+        </dict>
+    <!-- MISC. -->
     <!-- arm (++  foo, etc.)-->
 		<dict>
 			<key>comment</key>
@@ -215,69 +273,6 @@
 			<string>\+\+  [a-z]([a-z0-9-]*[a-z0-9])?</string>
 			<key>name</key>
 			<string>entity.name.function.hoon</string>
-		</dict>
-    <!-- term (%foo, %bar, etc.)-->
-		<dict>
-			<key>comment</key>
-			<string>term</string>
-			<key>match</key>
-			<string>%[a-z]([a-z0-9-]*[a-z0-9])?</string>
-			<key>name</key>
-			<string>storage.type.hoon</string>
-		</dict>
-    <!-- type (@u, @uv, @uvF, etc.) -->
-		<dict>
-			<key>comment</key>
-			<string>aura</string>
-			<key>match</key>
-			<string>@[a-z]([a-zA-Z0-9-]*[a-zA-Z0-9])?</string>
-			<key>name</key>
-			<string>storage.type.hoon</string>
-		</dict>
-    <!-- loobean (%.y, %.n, .y, .n) -->
-    <dict>
-			<key>comment</key>
-			<string>loobean</string>
-			<key>match</key>
-			<string>(\%?\.n|\%?\.y)</string>
-			<key>name</key>
-			<string>constant.language.hoon</string>
-		</dict>
-    <!-- constant loobean (%&, %|) -->
-    <dict>
-			<key>comment</key>
-			<string>loobean</string>
-			<key>match</key>
-			<string>(\%\||%&amp;)</string>
-			<key>name</key>
-			<string>constant.language.hoon</string>
-		</dict>
-    <!-- loobean true & false (&, |) -->
-    <dict>
-			<key>comment</key>
-			<string>loobean</string>
-			<key>match</key>
-			<string>(\||&amp;)</string>
-			<key>name</key>
-			<string>constant.language.hoon</string>
-		</dict>
-    <!-- numeric constant (%1, %2, %3, etc.)-->
-    <dict>
-			<key>comment</key>
-			<string>constant</string>
-			<key>match</key>
-			<string>%[0-9]</string>
-			<key>name</key>
-			<string>storage.type.hoon</string>
-		</dict>
-    <!-- literal string (%'foo', etc.) -->
-    <dict>
-			<key>comment</key>
-			<string>constant</string>
-			<key>match</key>
-			<string>%'[^']*'</string>
-			<key>name</key>
-			<string>constant.language.hoon</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
