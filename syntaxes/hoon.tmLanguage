@@ -10,75 +10,203 @@
 	<string>hoon</string>
 	<key>patterns</key>
 	<array>
-    <!-- colcol -->
-		<dict>
-			<key>begin</key>
-			<string>::</string>
-			<key>comment</key>
-			<string>comment</string>
-			<key>end</key>
-			<string>\n</string>
-			<key>name</key>
-			<string>comment.line.hoon</string>
-		</dict>
-    <!-- block string (double quotes) -->
-		<dict>
-			<key>begin</key>
-			<string>\s*"""</string>
-			<key>comment</key>
-			<string>doqbloq</string>
-			<key>end</key>
-			<string>\s*"""</string>
-			<key>name</key>
-			<string>string.quoted.double.hoon</string>
-		</dict>
-    <!-- block string (double quotes) -->
-		<dict>
-			<key>begin</key>
-			<string>\s*'''</string>
-			<key>comment</key>
-			<string>soqbloq</string>
-			<key>end</key>
-			<string>\s*'''</string>
-			<key>name</key>
-			<string>string.quoted.double.hoon</string>
-		</dict>
-    <!-- tape -->
-		<dict>
-			<key>begin</key>
-			<string>\"</string>
-			<key>comment</key>
-			<string>tape</string>
-			<key>end</key>
-			<string>\"</string>
-			<key>name</key>
-			<string>string.quoted.double.hoon</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\\.|[^"]</string>
-				</dict>
-			</array>
-		</dict>
-    <!-- cord -->
-		<dict>
-			<key>begin</key>
-			<string>\'</string>
-			<key>comment</key>
-			<string>cord</string>
-			<key>end</key>
-			<string>\'</string>
-			<key>name</key>
-			<string>string.quoted.single.hoon</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\\.|[^']</string>
-				</dict>
-			</array>
-		</dict>
+    <!-- COMMENTS -->
+      <dict>
+        <key>begin</key>
+        <string>\:\:</string>
+        <key>comment</key>
+        <string>comment</string>
+        <key>end</key>
+        <string>\n</string>
+        <key>name</key>
+        <string>comment.line.hoon</string>
+      </dict>
+    <!-- RUNES -->
+      <!-- arms -->
+      <dict>
+        <key>comment</key>
+        <string>arms</string>
+        <key>match</key>
+        <string>(\+\||\+\$|\+\+|\+\*)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- cores -->
+      <dict>
+        <key>comment</key>
+        <string>cores</string>
+        <key>match</key>
+        <string>(\|\$|\|\_|\|\:|\|\%|\|\.|\|\^|\|\-|\|\~|\|\*|\|\=|\|\@|\|\?)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- structures -->
+      <dict>
+        <key>comment</key>
+        <string>structures</string>
+        <key>match</key>
+        <string>(\$\||\$\_|\$\%|\$\:|\$\&lt;|\$\&gt;|\$\-|\$\^|\$\&amp;|\$\~|\$\@|\$\=|\$\?)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- calls -->
+      <dict>
+        <key>comment</key>
+        <string>calls</string>
+        <key>match</key>
+        <string>(\%\_|\%\:|\%\.|\%\-|\%\^|\%\+|\%\~|\%\*|\%\=)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- cells -->
+      <dict>
+        <key>comment</key>
+        <string>cells</string>
+        <key>match</key>
+        <string>(\:\_|\:\-|\:\^|\:\+|\:\~|\:\*)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- nock -->
+      <dict>
+        <key>comment</key>
+        <string>nock</string>
+        <key>match</key>
+        <string>(\.\^|\.\+|\.\*|\.\=|\.\?)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- imports -->
+      <dict>
+        <key>comment</key>
+        <string>imports</string>
+        <key>match</key>
+        <string>(\/\$|\/\%|\/\-|\/\+|\/\=|\/\*|\/\~|\/\?)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- casts -->
+      <dict>
+        <key>comment</key>
+        <string>casts</string>
+        <key>match</key>
+        <string>(\^\||\^\:|\^\.|\^\-|\^\+|\^\&amp;|\^\~|\^\*|\^\=|\^\?)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- macros -->
+      <dict>
+        <key>comment</key>
+        <string>macros</string>
+        <key>match</key>
+        <string>(\;\:|\;\/|\;\&lt;|\;\+|\;\;|\;\~|\:\*|\;\=)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- hints -->
+      <dict>
+        <key>comment</key>
+        <string>hints</string>
+        <key>match</key>
+        <string>(\~\||\~\$|\~\_|\~\%|\~\/|\~\&lt;|\~\&gt;|\~\+|\~\&amp;|\~\&amp;|\~\=|\~\?|\~\!)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- subject -->
+      <dict>
+        <key>comment</key>
+        <string>subject</string>
+        <key>match</key>
+        <string>(\=\||\=\:|\=\,|\=\.|\=\/|\=\&lt;|\=\&gt;|\=\-|\=\^|\=\+|\=\;|\=\~|\=\*|\=\?)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- conditionals -->
+      <dict>
+        <key>comment</key>
+        <string>conditionals</string>
+        <key>match</key>
+        <string>(\?\||\?\:|\?\.|\?\&lt;|\?\&gt;|\?\-|\?\^|\?\+|\?\&amp;|\?\@|\?\~|\?\=|\?\!)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- terminators -->
+      <dict>
+        <key>comment</key>
+        <string>terminators</string>
+        <key>match</key>
+        <string>(\=\=|\-\-)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+      <!-- wild -->
+      <dict>
+        <key>comment</key>
+        <string>wild</string>
+        <key>match</key>
+        <string>(\!\:|\!\,|\!\.|\!\&lt;|\!\&gt;|\!\;|\!\@|\!\=|\!\?|\!\!)</string>
+        <key>name</key>
+        <string>keyword.control.hoon</string>
+      </dict>
+    <!-- STRINGS -->
+      <!-- block string (double quotes) -->
+      <dict>
+        <key>begin</key>
+        <string>\s*"""</string>
+        <key>comment</key>
+        <string>doqbloq</string>
+        <key>end</key>
+        <string>\s*"""</string>
+        <key>name</key>
+        <string>string.quoted.double.hoon</string>
+      </dict>
+      <!-- block string (double quotes) -->
+      <dict>
+        <key>begin</key>
+        <string>\s*'''</string>
+        <key>comment</key>
+        <string>soqbloq</string>
+        <key>end</key>
+        <string>\s*'''</string>
+        <key>name</key>
+        <string>string.quoted.double.hoon</string>
+      </dict>
+      <!-- tape -->
+      <dict>
+        <key>begin</key>
+        <string>\"</string>
+        <key>comment</key>
+        <string>tape</string>
+        <key>end</key>
+        <string>\"</string>
+        <key>name</key>
+        <string>string.quoted.double.hoon</string>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>match</key>
+            <string>\\.|[^"]</string>
+          </dict>
+        </array>
+      </dict>
+      <!-- cord -->
+      <dict>
+        <key>begin</key>
+        <string>\'</string>
+        <key>comment</key>
+        <string>cord</string>
+        <key>end</key>
+        <string>\'</string>
+        <key>name</key>
+        <string>string.quoted.single.hoon</string>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>match</key>
+            <string>\\.|[^']</string>
+          </dict>
+        </array>
+      </dict>
     <!-- arm (++  foo, etc.)-->
 		<dict>
 			<key>comment</key>
@@ -114,15 +242,6 @@
 			<string>(\%?\.n|\%?\.y)</string>
 			<key>name</key>
 			<string>constant.language.hoon</string>
-		</dict>
-    <!-- rune -->
-		<dict>
-			<key>comment</key>
-			<string>rune</string>
-			<key>match</key>
-      <string>(\+\||\+\$|\+\+|\+\*|\|\$|\|\_|\|:|\|\%|\|\.|\|\^|\|\-|\|\~|\|\*|\|\=|\|\@|\|\?|\$\||\$\_|\$\%|\$:|\$&lt;|\$&gt;|\$\-|\$\^|\$&amp;|\$\~|\$\@|\$\=|\$\?|\%\_|\%:|\%\.|\%\-|\%\^|\%\+|\%\~|\%\*|\%\=|:\_|:\-|:\^|:\+|:\~|:\*|\.\^|\.\+|\.\*|\.\=|\.\?|\/\$|\/\%|\/\-|\/\+|\/\=|\/\*|\/\~|\/\?|\^\||\^:|\^\.|\^\-|\^\+|\^&amp;|\^\~|\^\*|\^\=|\^\?|\;:|\;\/|\;&lt;|\;\+|\;\;|\;\~|:\*|\;\=|\~\||\~\$|\~\_|\~\%|\~\/|\~&lt;|\~&gt;|\~\+|\~&amp;|\~&amp;|\~\=|\~\?|\~\!|\=\||\=:|\=\,|\=\.|\=\/|\=&lt;|\=&gt;|\=\-|\=\^|\=\+|\=\;|\=\~|\=\*|\=\?|\?\||\?:|\?\.|\?&lt;|\?&gt;|\?\-|\?\^|\?\+|\?&amp;|\?\@|\?\~|\?\=|\?\!|\=\=|\-\-|\!:|\!\,|\!\.|\!&lt;|\!&gt;|\!\;|\!\@|\!\=|\!\?|\!\!)</string>
-			<key>name</key>
-			<string>keyword.control.hoon</string>
 		</dict>
     <!-- constant loobean (%&, %|) -->
     <dict>
