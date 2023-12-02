@@ -267,6 +267,15 @@
           <key>name</key>
           <string>constant.character.hoon</string>
         </dict>
+    <!-- ACCESSORS -->
+        <dict>
+          <key>comment</key>
+          <string>accesor</string>
+          <key>match</key>
+          <string>((?<=[a-zA-Z0-9-])\.(?=[a-zA-Z0-9-])|(?<=[a-zA-Z0-9-])\:(?=[a-zA-Z0-9-]))</string>
+          <key>name</key>
+          <string>punctuation.accessor.hoon</string>
+        </dict>
     <!-- MISC. -->
       <!-- arm (++  foo, etc.)-->
       <dict>
