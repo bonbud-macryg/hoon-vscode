@@ -20,15 +20,16 @@
           <key>name</key>
           <string>constant.language.hoon</string>
         </dict>
+        <!-- TODO exclude bar runes from this rule -->
         <!-- constant loobean (%&, %|, &, |) -->
-        <dict>
+        <!-- <dict>
           <key>comment</key>
           <string>loobean</string>
           <key>match</key>
           <string>(\%?\||\%?\&amp;)</string>
           <key>name</key>
           <string>constant.language.hoon</string>
-        </dict>
+        </dict> -->
     <!-- COMMENTS -->
       <dict>
         <key>begin</key>
@@ -276,6 +277,8 @@
           <key>name</key>
           <string>punctuation.accessor.hoon</string>
         </dict>
+        <!-- TODO lark notation -->
+        <!-- TODO -.foo -:(bar bat) etc. -->
     <!-- MISC. -->
       <!-- arm (++  foo, etc.)-->
       <dict>
