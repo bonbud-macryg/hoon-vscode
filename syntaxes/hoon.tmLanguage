@@ -41,6 +41,16 @@
         <key>name</key>
         <string>comment.line.hoon</string>
       </dict>
+    <!-- MISC. -->
+      <!-- arm (++  foo, etc.)-->
+      <dict>
+        <key>comment</key>
+        <string>arm</string>
+        <key>match</key>
+        <string>\+\+  [a-z]([a-z0-9-]*[a-z0-9])?</string>
+        <key>name</key>
+        <string>entity.name.function.hoon</string>
+      </dict>
     <!-- RUNES -->
       <!-- arms -->
       <dict>
@@ -279,16 +289,6 @@
         </dict>
         <!-- TODO lark notation -->
         <!-- TODO -.foo -:(bar bat) etc. -->
-    <!-- MISC. -->
-      <!-- arm (++  foo, etc.)-->
-      <dict>
-        <key>comment</key>
-        <string>arm</string>
-        <key>match</key>
-        <string>\+\+  [a-z]([a-z0-9-]*[a-z0-9])?</string>
-        <key>name</key>
-        <string>entity.name.function.hoon</string>
-      </dict>
 	</array>
   <!-- TODO -->
   <!--
