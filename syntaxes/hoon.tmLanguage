@@ -168,6 +168,8 @@
         <string>keyword.control.hoon</string>
       </dict>
     <!-- STRINGS -->
+      <!-- TODO escape characters -->
+      <!-- TODO string interpolation -->
       <!-- block string (double quotes) -->
       <dict>
         <key>begin</key>
@@ -255,6 +257,7 @@
           <key>name</key>
           <string>constant.numeric.hoon</string>
         </dict>
+        <!-- TODO more numeric constants -->
         <!-- literal string (%'foo', etc.) -->
         <dict>
           <key>comment</key>
@@ -265,16 +268,59 @@
           <string>constant.character.hoon</string>
         </dict>
     <!-- MISC. -->
-    <!-- arm (++  foo, etc.)-->
-		<dict>
-			<key>comment</key>
-			<string>arm</string>
-			<key>match</key>
-			<string>\+\+  [a-z]([a-z0-9-]*[a-z0-9])?</string>
-			<key>name</key>
-			<string>entity.name.function.hoon</string>
-		</dict>
+      <!-- arm (++  foo, etc.)-->
+      <dict>
+        <key>comment</key>
+        <string>arm</string>
+        <key>match</key>
+        <string>\+\+  [a-z]([a-z0-9-]*[a-z0-9])?</string>
+        <key>name</key>
+        <string>entity.name.function.hoon</string>
+      </dict>
 	</array>
+  <!-- TODO -->
+  <!--
+  @ Empty aura
+
+  @c Unicode dependent  ~-~45fed.
+
+  @d Date
+  @da Date, absolute  ~2020.12.25..7.15.0..1ef5
+  @dr Date, relative  ~d71.h19.m26.s24..9d55
+
+  @i Internet address
+  @if IPv4 address  .195.198.143.90
+  @is IPv6 address  .0.0.0.0.0.1c.c3c6.8f5a
+
+  @p Phonemic base                                           ~laszod-dozser-fosrum-fanbyr
+  @q Phonemic base, unscrambled (used with Urbit HD wallet)  .~laszod-dozser-dalteb-hilsyn
+
+  @r IEEE-754 floating-point number
+  @rh Floating-point number, half-precision, 16-bit        .~~3.14
+  @rs Floating-point number, single-precision, 32-bit      .3.141592653589793
+  @rd Floating-point number, double-precision, 64-bit      .~3.141592653589793
+  @rq Floating-point number, quadruple-precision, 128-bit  .~~~3.141592653589793
+
+  @s Integer, signed (sign bit low)
+  @sb Signed binary       \-\-0b10.0000
+  @sd Signed decimal      \-\-1.000
+  @sv Signed base-32      \-\-0v201.4gvml.245kc
+  @sw Signed base-64      \-\-0w2.04AfS.G8xqc
+  @sx Signed hexadecimal  \-\-0x2004.90fd
+
+  @t UTF-8 text (cord)           'urbit'
+  @ta ASCII text (knot)          ~.urbit
+  @tas ASCII text symbol (term)  %urbit
+
+  @u Integer, unsigned
+  @ub Unsigned binary       0b10.1011
+  @uc Bitcoin address       0c1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+  @ud Unsigned decimal      8.675.309
+  @ui Unsigned decimal      0i123456789
+  @uv Unsigned base-32      0v88nvd
+  @uw Unsigned base-64      0wx5~J
+  @ux Unsigned hexadecimal  0x84.5fed
+   -->
 	<key>scopeName</key>
 	<string>source.hoon</string>
 	<key>uuid</key>
