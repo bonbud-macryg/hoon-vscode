@@ -257,7 +257,7 @@
           <key>match</key>
           <string>%[a-z]([a-z0-9-]*[a-z0-9])?</string>
           <key>name</key>
-          <string>constant.character.hoon</string>
+          <string>constant.language.hoon</string>
         </dict>
         <!-- numeric constant (%1, %2, %3, etc.)-->
         <dict>
@@ -276,7 +276,16 @@
           <key>match</key>
           <string>%'[^']*'</string>
           <key>name</key>
-          <string>constant.character.hoon</string>
+          <string>constant.language.hoon</string>
+        </dict>
+        <!-- @ta knot (.~foo, etc.) -->
+        <dict>
+          <key>comment</key>
+          <string>knot</string>
+          <key>match</key>
+          <string>\~\.[a-z]([a-zA-Z0-9-]*[a-zA-Z0-9])?</string>
+          <key>name</key>
+          <string>constant.language.hoon</string>
         </dict>
     <!-- ACCESSORS -->
         <!-- dot (e.g. p.q) -->
