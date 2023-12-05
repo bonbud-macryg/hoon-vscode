@@ -291,14 +291,22 @@
         <!-- lark notation (e.g. -<+>-.foo) -->
         <!-- TODO this should only highlight valid lark notation -->
         <dict>
-        <key>comment</key>
-        <string>arm</string>
-        <key>match</key>
-        <string>[-+][-+<>]+?(\.|\:)</string>
-        <key>name</key>
-        <string>punctuation.accessor.hoon</string>
-      </dict>
-      <!-- TODO numeric tree addressing (e.g. +1:(foo bar), +6:foo, etc.) -->
+          <key>comment</key>
+          <string>lark</string>
+          <key>match</key>
+          <string>[-+][-+<>]+?(\.|\:)</string>
+          <key>name</key>
+          <string>punctuation.accessor.hoon</string>
+        </dict>
+        <!-- numeric tree addressing (e.g. +1:(foo bar), +6:foo, etc.) -->
+        <dict>
+          <key>comment</key>
+          <string>tree address</string>
+          <key>match</key>
+          <string>\+[0-9]+\:</string>
+          <key>name</key>
+          <string>punctuation.accessor.hoon</string>
+        </dict>
 	</array>
   <!-- TODO -->
   <!--
