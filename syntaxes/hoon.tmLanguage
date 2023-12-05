@@ -279,6 +279,7 @@
           <string>constant.character.hoon</string>
         </dict>
     <!-- ACCESSORS -->
+        <!-- dot (e.g. p.q) -->
         <dict>
           <key>comment</key>
           <string>accesor</string>
@@ -287,8 +288,17 @@
           <key>name</key>
           <string>punctuation.accessor.hoon</string>
         </dict>
-        <!-- TODO lark notation -->
-        <!-- TODO -.foo -:(bar bat) etc. -->
+        <!-- lark notation (e.g. -<+>-.foo) -->
+        <!-- TODO this should only highlight valid lark notation -->
+        <dict>
+        <key>comment</key>
+        <string>arm</string>
+        <key>match</key>
+        <string>[-+][-+<>]+?(\.|\:)</string>
+        <key>name</key>
+        <string>punctuation.accessor.hoon</string>
+      </dict>
+      <!-- TODO numeric tree addressing (e.g. +1:(foo bar), +6:foo, etc.) -->
 	</array>
   <!-- TODO -->
   <!--
