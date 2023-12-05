@@ -278,7 +278,7 @@
           <key>name</key>
           <string>constant.language.hoon</string>
         </dict>
-        <!-- @ta knot (.~foo, etc.) -->
+        <!-- @ta knot (~.foo, etc.) -->
         <dict>
           <key>comment</key>
           <string>knot</string>
@@ -316,6 +316,16 @@
           <key>name</key>
           <string>punctuation.accessor.hoon</string>
         </dict>
+      <!-- NAMES -->
+        <!-- face -->
+        <dict>
+          <key>comment</key>
+          <string>face</string>
+          <key>match</key>
+          <string>((?<![a-zA-Z0-9-]=)(?<==)[a-zA-Z0-9]+|[a-zA-Z0-9-]+(?==))</string>
+          <key>name</key>
+          <string>variable.other.hoon</string>
+        </dict>
 	</array>
   <!-- TODO -->
   <!--
@@ -346,10 +356,6 @@
   @sv Signed base-32      \-\-0v201.4gvml.245kc
   @sw Signed base-64      \-\-0w2.04AfS.G8xqc
   @sx Signed hexadecimal  \-\-0x2004.90fd
-
-  @t UTF-8 text (cord)           'urbit'
-  @ta ASCII text (knot)          ~.urbit
-  @tas ASCII text symbol (term)  %urbit
 
   @u Integer, unsigned
   @ub Unsigned binary       0b10.1011
