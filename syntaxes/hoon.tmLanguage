@@ -269,6 +269,15 @@
         <key>name</key>
         <string>storage.type.hoon</string>
       </dict>
+      <!-- tic cast -->
+      <dict>
+        <key>comment</key>
+        <string>type</string>
+        <key>match</key>
+        <string>(?<=\`)[\w\(\)\[\] -~]+(?=\`)</string>
+        <key>name</key>
+        <string>storage.type.hoon</string>
+      </dict>
     <!-- CONSTANTS -->
       <!-- term (%foo, %bar, etc.)-->
         <dict>
