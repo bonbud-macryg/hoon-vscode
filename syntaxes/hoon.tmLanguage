@@ -258,6 +258,17 @@
         <key>name</key>
         <string>storage.type.hoon</string>
       </dict>
+      <!-- kethep type -->
+      <dict>
+        <key>comment</key>
+        <string>type</string>
+        <key>match</key>
+        <string>(?<=\^\-\s\s)[\w\(\)\[\] -~]+</string>
+        <key>end</key>
+        <string>(\n|\s{2})</string>
+        <key>name</key>
+        <string>storage.type.hoon</string>
+      </dict>
     <!-- CONSTANTS -->
       <!-- term (%foo, %bar, etc.)-->
         <dict>
