@@ -351,7 +351,7 @@
           <key>comment</key>
           <string>face</string>
           <key>match</key>
-          <string>((?<![a-zA-Z0-9-]=)(?<==)[a-zA-Z0-9]+|[a-zA-Z0-9-]+(?==))</string>
+          <string>((?<![a-zA-Z0-9-]=)(?<==)[a-zA-Z0-9-]+|[a-zA-Z0-9-]+(?==))</string>
           <key>name</key>
           <string>variable.other.hoon</string>
         </dict>
