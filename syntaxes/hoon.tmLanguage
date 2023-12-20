@@ -361,7 +361,7 @@
             <key>comment</key>
             <string>type</string>
             <key>match</key>
-            <string>((?<==)[a-zA-Z0-9-]+|(?<=[a-zA-Z0-9-]=)(?<==)\(.*)</string>
+            <string>((?<==)[a-zA-Z0-9:-]+|(?<=[a-zA-Z0-9:-]=)(?<==)\(.*)</string>
             <key>end</key>
             <string>  </string>
             <key>name</key>
