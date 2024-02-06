@@ -66,7 +66,7 @@
         <key>comment</key>
         <string>arm</string>
         <key>match</key>
-        <string>(?<=(\%(\_|\:|\.|\-|\^|\+|\~|\*|\=))(\s\s|\())[a-z]([a-z0-9-:]*[a-z0-9-:])?</string>
+        <string>(?<=(\%(\_|\:|\.|\-|\^|\+|\~|\*))(\s\s|\())[a-z]([a-z0-9-:]*[a-z0-9-:])?</string>
         <key>name</key>
         <string>entity.name.function.hoon</string>
       </dict>
